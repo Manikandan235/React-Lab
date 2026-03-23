@@ -23,8 +23,8 @@ function App() {
       <ul>
         {tasks.map((task, index) => (
           <li key={index}>
-            <input type="checkbox" checked={tasks.completed} />
-            <span className={tasks.completed ? "done" : ""}>{task.name}</span>
+            <input type="checkbox" checked={task.completed />
+            <span className={task.completed ? "done" : ""}>{task.name}</span>
             <button onClick={() => deleteTask(index)}>delete</button>
           </li>
         ))}
